@@ -15,11 +15,15 @@ public class Anime {
         this.genero = genero;
     }
 
+    //Só pode chamar o construtor dentro de outro construtor. ..
+    //Obrigatoriamente precisa ser a primeira linha
+    // Só pode ser chamado o construtor usando o this com a quantidade de argumentos referente ao construtor que quer chamar
     public Anime(String nome, String tipo, int episodios, String genero, String studio) {
         this(nome, tipo, episodios, genero);
         this.studio = studio;
     }
 
+    //Construtor sem parâmetros.
     public Anime(){
 
     }
@@ -29,6 +33,7 @@ public class Anime {
         System.out.println(this.tipo);
         System.out.println(this.episodios);
         System.out.println(this.genero);
+        System.out.println(this.studio);
     }
 
     public String getNome() {
