@@ -1,6 +1,6 @@
 package dev.vicko.maratonajava.javacore.Aintroducaoclasses.test;
 
-import dev.vicko.maratonajava.javacore.Aintroducaoclasses.dominio.Estudante;
+import dev.vicko.maratonajava.javacore.Aintroducaoclasses.domain.Estudante;
 
 public class EstudanteTest01 {
     public static void main(String[] args) {

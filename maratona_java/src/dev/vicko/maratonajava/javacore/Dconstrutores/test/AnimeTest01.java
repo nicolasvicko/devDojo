@@ -1,6 +1,6 @@
 package dev.vicko.maratonajava.javacore.Dconstrutores.test;
 
-import dev.vicko.maratonajava.javacore.Dconstrutores.dominio.Anime;
+import dev.vicko.maratonajava.javacore.Dconstrutores.domain.Anime;
 
 public class AnimeTest01 {
 

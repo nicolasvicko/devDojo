@@ -1,6 +1,6 @@
 package dev.vicko.maratonajava.javacore.Bintroducaometodos.test;
 
-import dev.vicko.maratonajava.javacore.Bintroducaometodos.dominio.Calculadora;
+import dev.vicko.maratonajava.javacore.Bintroducaometodos.domain.Calculadora;
 
 public class CalculadoraTest05 {
     public static void main(String[] args) {

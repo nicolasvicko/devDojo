@@ -1,6 +1,6 @@
 package dev.vicko.maratonajava.javacore.Aintroducaoclasses.test;
 
-import dev.vicko.maratonajava.javacore.Aintroducaoclasses.dominio.Carro;
+import dev.vicko.maratonajava.javacore.Aintroducaoclasses.domain.Carro;
 
 public class CarroTest01 {
     public static void main(String[] args) {

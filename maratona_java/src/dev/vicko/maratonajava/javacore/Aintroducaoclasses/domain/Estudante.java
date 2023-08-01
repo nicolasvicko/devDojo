@@ -1,4 +1,4 @@
-package dev.vicko.maratonajava.javacore.Aintroducaoclasses.dominio;
+package dev.vicko.maratonajava.javacore.Aintroducaoclasses.domain;
 
 public class Estudante {
 

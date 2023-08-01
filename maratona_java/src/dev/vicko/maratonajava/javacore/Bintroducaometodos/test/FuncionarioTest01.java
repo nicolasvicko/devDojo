@@ -1,6 +1,6 @@
 package dev.vicko.maratonajava.javacore.Bintroducaometodos.test;
 
-import dev.vicko.maratonajava.javacore.Bintroducaometodos.dominio.Funcionario;
+import dev.vicko.maratonajava.javacore.Bintroducaometodos.domain.Funcionario;
 
 public class FuncionarioTest01 {
     public static void main(String[] args) {

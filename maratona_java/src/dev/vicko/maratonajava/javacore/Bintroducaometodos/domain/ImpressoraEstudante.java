@@ -1,4 +1,4 @@
-package dev.vicko.maratonajava.javacore.Bintroducaometodos.dominio;
+package dev.vicko.maratonajava.javacore.Bintroducaometodos.domain;
 
 public class ImpressoraEstudante {
 

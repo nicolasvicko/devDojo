@@ -1,6 +1,6 @@
 package dev.vicko.maratonajava.javacore.Csobrecargametodos.test;
 
-import dev.vicko.maratonajava.javacore.Csobrecargametodos.dominio.Anime;
+import dev.vicko.maratonajava.javacore.Csobrecargametodos.domain.Anime;
 
 public class AnimeTest01 {
 

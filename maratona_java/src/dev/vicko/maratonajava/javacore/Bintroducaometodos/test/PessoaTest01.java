@@ -1,6 +1,6 @@
 package dev.vicko.maratonajava.javacore.Bintroducaometodos.test;
 
-import dev.vicko.maratonajava.javacore.Bintroducaometodos.dominio.Pessoa;
+import dev.vicko.maratonajava.javacore.Bintroducaometodos.domain.Pessoa;
 
 public class PessoaTest01 {
     public static void main(String[] args) {
