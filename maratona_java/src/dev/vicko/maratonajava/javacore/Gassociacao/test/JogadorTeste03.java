@@ -24,6 +24,7 @@ public class JogadorTeste03 {
 
 		  System.out.println("--- Lista de Time ---");
 		  for (Jogador brasilJogadores : brasil.getJogadores()) {
+
 				System.out.println(brasilJogadores.getNome());
 		  }
 		  System.out.println("--- Fim da lista de Time ---");
