@@ -10,7 +10,7 @@ public class Carro {
 	 E ao alterar um valor Static, vai ser alterado para todas as instâncias criadas.
 	 O atributo static pertence a classe e todos os objetos vão fazer referência ao mesmo valor.
 	  */
-	 public static double velocidadeLimite = 250;
+	 private static double velocidadeLimite = 250;
 
 	 public Carro (String nome, double velocidadeMaxima) {
 		  this.nome = nome;
@@ -23,6 +23,16 @@ public class Carro {
 		  System.out.println(this.nome);
 		  System.out.println(this.velocidadeMaxima);
 		  System.out.println(Carro.velocidadeLimite);
+	 }
+
+	 public static void setVelocidadeLimite (double velocidadeLimite) {
+		  Carro.velocidadeLimite = velocidadeLimite;
+	 }
+
+	 // Métodos static só podem acessar atributos static.
+	 // Static acessa a classe independente do objeto estar criado ou não.
+	 public static double getVelocidadeLimite () {
+		  return velocidadeLimite;
 	 }
 
 	 public String getNome () {
