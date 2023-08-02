@@ -26,7 +26,7 @@ public class Animes {
     }
 
     public Animes() {
-        for (int episodio : this.episodios){
+        for (int episodio : this.episodios) {
             System.out.println(episodio + " ");
         }
     }
