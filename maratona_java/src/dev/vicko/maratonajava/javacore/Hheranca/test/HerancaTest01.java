@@ -1,0 +1,30 @@
+package dev.vicko.maratonajava.javacore.Hheranca.test;
+
+import dev.vicko.maratonajava.javacore.Hheranca.domain.Endereco;
+import dev.vicko.maratonajava.javacore.Hheranca.domain.Funcionario;
+import dev.vicko.maratonajava.javacore.Hheranca.domain.Pessoa;
+
+public class HerancaTest01 {
+	 public static void main (String[] args) {
+		  Endereco endereco = new Endereco();
+		  endereco.setRua("Rua 3");
+		  endereco.setCep("27910-110");
+
+		  Pessoa pessoa = new Pessoa();
+		  pessoa.setNome("Toyohisa Shimazu");
+		  pessoa.setCpf("1111111");
+		  pessoa.setEndereco(endereco);
+
+		  pessoa.imprime();
+
+		  Funcionario funcionario = new Funcionario();
+		  funcionario.setNome("Oda Nobunaga");
+		  funcionario.setCpf("2222222");
+		  funcionario.setEndereco(endereco);
+		  funcionario.setSalario(20000);
+
+		  funcionario.imprime();
+
+
+	 }
+}
