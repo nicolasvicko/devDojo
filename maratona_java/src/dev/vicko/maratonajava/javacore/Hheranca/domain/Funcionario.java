@@ -3,6 +3,16 @@ package dev.vicko.maratonajava.javacore.Hheranca.domain;
 public class Funcionario extends Pessoa {
 	 private double salario;
 
+	 static {
+		  System.out.println("Dentro do bloco estático de Funcionário");
+	 }
+	 {
+		  System.out.println("Bloco 2 de inicialização não estático de Funcionário.");
+	 }
+	 {
+		  System.out.println("Bloco 1 de inicialização não estático de Funcionário.");
+	 }
+
 
 	 /*
 	 Ao adicionar construtor na classe mãe, obrigatoriamente precisamos implementar esse construtor em todas as classes filhas.
@@ -10,6 +20,7 @@ public class Funcionario extends Pessoa {
 	  */
 	 public Funcionario (String nome) {
 		  super(nome);
+		  System.out.println("Dentro do construtor de funcionário");
 	 }
 
 	 public void  imprime(){
