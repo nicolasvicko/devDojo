@@ -1,7 +1,6 @@
 package dev.vicko.maratonajava.javacore.Lclassesabstratas.test;
 
 import dev.vicko.maratonajava.javacore.Lclassesabstratas.domain.Desenvolvedor;
-import dev.vicko.maratonajava.javacore.Lclassesabstratas.domain.Funcionario;
 import dev.vicko.maratonajava.javacore.Lclassesabstratas.domain.Gerente;
 
 public class FuncionarioTest01 {
