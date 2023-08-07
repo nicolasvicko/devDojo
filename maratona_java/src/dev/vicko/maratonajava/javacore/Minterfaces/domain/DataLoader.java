@@ -1,7 +1,7 @@
 package dev.vicko.maratonajava.javacore.Minterfaces.domain;
 
 public interface DataLoader {
-    //
+    // Todos os atributos em uma interface são constantes.
     public static final int MAX_DATA_SIZE = 10;
     public abstract void load();
     default void checkPermission(){
