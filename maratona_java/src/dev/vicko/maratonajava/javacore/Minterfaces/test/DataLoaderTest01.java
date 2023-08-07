@@ -1,6 +1,7 @@
 package dev.vicko.maratonajava.javacore.Minterfaces.test;
 
 import dev.vicko.maratonajava.javacore.Minterfaces.domain.DataBaseLoader;
+import dev.vicko.maratonajava.javacore.Minterfaces.domain.DataLoader;
 import dev.vicko.maratonajava.javacore.Minterfaces.domain.FileLoader;
 
 public class DataLoaderTest01 {
@@ -14,5 +15,9 @@ public class DataLoaderTest01 {
 
         dataBaseLoader.checkPermission();
         fileLoader.checkPermission();
+
+        DataBaseLoader.retrieveMaxDataSize();
+        DataLoader.retrieveMaxDataSize();
+
     }
 }
