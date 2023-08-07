@@ -16,7 +16,13 @@ public class ProdutoTeste02 {
         System.out.println(tomateCereja.getNome());
         System.out.println(tomateCereja.getValor());
         System.out.println(tomateCereja.calcularImposto());
-        System.out.println("Data de Validade" + tomateCereja.d);
+        System.out.println("Data de Validade");
         System.out.println("----------------");
+
+
+
+
+
+
     }
 }
