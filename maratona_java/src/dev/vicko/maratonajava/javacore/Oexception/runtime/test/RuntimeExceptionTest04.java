@@ -1,5 +1,6 @@
 package dev.vicko.maratonajava.javacore.Oexception.runtime.test;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.sql.SQLException;
@@ -9,30 +10,22 @@ public class RuntimeExceptionTest04 {
         try {
             throw new ArrayIndexOutOfBoundsException();
 
-        } catch (ArrayIndexOutOfBoundsException e) {
+        } catch (ArrayIndexOutOfBoundsException | IllegalArgumentException | ArithmeticException e) {
             System.out.println("Dentro do ArrayIndexOutOfBoundsException");
-        } catch (IndexOutOfBoundsException e) {
-            System.out.println("Dentro do IndexOutOfBoundsException");
-        } catch (IllegalArgumentException e) {
-            System.out.println("Dentro do IllegalArgumentException");
-        } catch (ArithmeticException e) {
-            System.out.println("Dentro do ArithmeticException");
-        } catch (RuntimeException e) {
+        }catch (RuntimeException e) {
             System.out.println("Dentro do RuntimeException");
         }
 
         try {
             talvesLanceException();
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        } catch (FileNotFoundException e) {
+        } catch (SQLException | IOException e) {
             throw new RuntimeException(e);
         }
 
 
     }
 
-    private static void talvesLanceException () throws SQLException, FileNotFoundException {
+    private static void talvesLanceException () throws SQLException, IOException {
     }
 
 }
