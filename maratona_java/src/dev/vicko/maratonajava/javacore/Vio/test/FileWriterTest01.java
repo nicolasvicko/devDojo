@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class FileWriter01 {
+public class FileWriterTest01 {
 	 public static void main (String[] args) {
 		  String caminho = "C:\\Users\\nicol\\IdeaProjects\\devDojo\\Arquivo\\file.txt";
 		  File file = new File(caminho);
