@@ -1,20 +1,20 @@
 package dev.vicko.maratonajava.javacore.Ycolections.domain;
 
 public class Smartphone {
-	 private String serialNumer;
+	 private String serialNumber;
 	 private String marca;
 
-	 public Smartphone (String serialNumer, String marca) {
-		  this.serialNumer = serialNumer;
+	 public Smartphone (String serialNumber, String marca) {
+		  this.serialNumber = serialNumber;
 		  this.marca = marca;
 	 }
 
-	 public String getSerialNumer () {
-		  return serialNumer;
+	 public String getSerialNumber () {
+		  return serialNumber;
 	 }
 
-	 public void setSerialNumer (String serialNumer) {
-		  this.serialNumer = serialNumer;
+	 public void setSerialNumber (String serialNumber) {
+		  this.serialNumber = serialNumber;
 	 }
 
 	 public String getMarca () {
@@ -25,9 +25,18 @@ public class Smartphone {
 		  this.marca = marca;
 	 }
 
-	 // Reflexivo: x.equals(x) tem que ser true para tudo que for diferente de null.
+	 /* Reflexivo: x.equals(x) tem que ser true para tudo que for diferente de null.
+	 	Simétrico: para x e y diferentes de null, se x.equals(y) == true, logo y.equals(x) == true (precisa ser true)
+	 	Transitividade: para x,y,z diferentes de null, se x.equals(y) == true, e x.equals(z) ==true logo, y.equals(z) ==true
+	 	Consistente; x.equals(x) sempre retorna true se x for diferente de null
+	 	Para x diferente de null, x.equals(null) tem que retornar false.
+	 * */
 	 @Override
 	 public boolean equals (Object obj) {
-		  return super.equals(obj);
+		  if (obj == null) return false;
+		  if (this == obj) return true;
+		  if (this.getClass() != obj.getClass()) return false;
+		  Smartphone smartphone = (Smartphone) obj;
+		  return serialNumber != null && serialNumber.equals(smartphone.serialNumber);
 	 }
 }
