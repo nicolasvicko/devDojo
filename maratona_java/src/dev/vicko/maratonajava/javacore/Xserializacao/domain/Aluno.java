@@ -20,7 +20,7 @@ public class Aluno implements Serializable {
 	 public Aluno (long id, String williamSuane, String number) {
 	 }
 
-	 @Serial
+	  //@Serial introduzido na versão 14
 	 private void writeObject (ObjectOutputStream oos) {
 		  try {
 				oos.defaultWriteObject();
@@ -30,7 +30,7 @@ public class Aluno implements Serializable {
 		  }
 	 }
 
-	 @Serial
+	  //@Serial introduzido na versão 14
 	 private void readObject (ObjectInputStream ois) {
 		  try {
 				ois.defaultReadObject();
