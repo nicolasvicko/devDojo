@@ -2,7 +2,7 @@ package dev.vicko.maratonajava.javacore.Ycolections.domain;
 
 import java.util.Objects;
 
-public class Manga {
+public class Manga implements Comparable<Manga> {
 	 private Long id;
 	 private String nome;
 	 private double preco;
@@ -59,5 +59,19 @@ public class Manga {
 	 @Override
 	 public int hashCode () {
 		  return Objects.hash(id, nome, preco);
+	 }
+
+	 @Override
+	 public int compareTo (Manga outroManga) {
+		  /*
+		  negativo se o this < outroManga
+		  se this == outroManga, return 0
+		  positivo se o this > outroManga
+		   */
+		  return this.nome.compareTo(outroManga.getNome());
+
+		 /* return Double.compare(preco, outroManga.getPreco());
+		  return Double.valueOf(preco).compareTo(outroManga.getPreco());
+		  return this.id.compareTo(outroManga.getId());*/
 	 }
 }
