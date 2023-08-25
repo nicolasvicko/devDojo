@@ -25,6 +25,10 @@ class MangaPrecoComparator implements Comparator<Manga> {
 
 public class NavigableSetTest01 {
 	 public static void main (String[] args) {
+		  /*
+		  NavigableSet trabalha com apenas 1 valor. E obrigatoriamente a classe ou interfave precisa ter a implementação
+		  do comparable ou precisa passar om comparator
+		   */
 		  NavigableSet<Smartphone> set = new TreeSet<>(new SmartphoneMarcaComparator());
 
 		  Smartphone smartphone = new Smartphone("123", "Nokia");
