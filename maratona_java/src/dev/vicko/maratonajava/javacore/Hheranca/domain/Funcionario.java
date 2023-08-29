@@ -15,7 +15,7 @@ public class Funcionario extends Pessoa {
 
 
 	 /*
-	 Ao adicionar construtor na classe mãe, obrigatoriamente precisamos implementar esse construtor em todas as classes filhas.
+	 Ao adicionar construtor na classe mãe, obrigatoriamente precisamos implementar esse construtor em todas as domain filhas.
 	 Chamar o super() sem argumentos não precisa. essa chamada é implícita.
 	  */
 	 public Funcionario (String nome) {
