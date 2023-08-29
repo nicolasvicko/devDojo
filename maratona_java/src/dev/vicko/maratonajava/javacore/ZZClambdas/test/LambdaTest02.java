@@ -8,10 +8,10 @@ import java.util.function.Function;
 public class LambdaTest02 {
 	 public static void main (String[] args) {
 		  List<String> strings = List.of("Natsu", "Allucard");
-		  List<Integer> integers = map(strings, (String s) -> s.length());
+		  List<Integer> integers = map(strings, String::length);
 		  System.out.println(integers);
 
-		  List<String> map = map(strings, s -> s.toUpperCase());
+		  List<String> map = map(strings, String::toUpperCase);
 		  System.out.println(map);
 	 }
 
