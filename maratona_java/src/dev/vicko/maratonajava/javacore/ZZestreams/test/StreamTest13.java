@@ -23,7 +23,7 @@ public class StreamTest13 {
 
 	 public static void main (String[] args) {
 		  Map<Promotion, List<LightNovel>> collect = lightNovels.stream()
-					 .collect(Collectors.groupingBy(ln -> ln.getPrice() < 6 ? Promotion.UNDER_PROMOTION : Promotion.NORMAL_PRICE
+					 .collect(Collectors.groupingBy(StreamTest13::getPromotion
 					 ));
 		  System.out.println(collect);
 		  ///Map<Category, Map<Promotion, List<lightNovel>>>
@@ -31,11 +31,14 @@ public class StreamTest13 {
 		  Map<Category, Map<Promotion, List<LightNovel>>> collect1 = lightNovels.stream()
 					 .collect(Collectors
 								.groupingBy(LightNovel::getCategory,
-										  Collectors.groupingBy(ln -> ln.getPrice() < 6 ? Promotion.UNDER_PROMOTION : Promotion.NORMAL_PRICE
-										  )));
+										  Collectors.groupingBy(StreamTest13::getPromotion)));
 		  System.out.println(collect1);
 
 
+	 }
+
+	 private static Promotion getPromotion (LightNovel ln) {
+		  return ln.getPrice() < 6 ? Promotion.UNDER_PROMOTION : Promotion.NORMAL_PRICE;
 	 }
 
 }
