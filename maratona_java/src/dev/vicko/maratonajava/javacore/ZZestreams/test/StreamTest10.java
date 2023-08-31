@@ -15,7 +15,7 @@ public class StreamTest10 {
 					 .forEach(System.out::println);
 
 		  ThreadLocalRandom random = ThreadLocalRandom.current();
-		  Stream.generate(()-> random.nextInt(1,500))
+		  Stream.generate(()-> random.nextInt(1,1000))
 					 .limit(90)
 					 .forEach(System.out::println);
 	 }
