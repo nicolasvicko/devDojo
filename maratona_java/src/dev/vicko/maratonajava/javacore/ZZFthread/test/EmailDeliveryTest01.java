@@ -4,7 +4,10 @@ import dev.vicko.maratonajava.javacore.ZZFthread.domain.Members;
 import dev.vicko.maratonajava.javacore.ZZFthread.services.EmailDeliveryService;
 
 import javax.swing.*;
-
+/*
+Wait, notify e notifyAll
+Precisam estar dentro de um Syncronized para ter o lock.
+ */
 public class EmailDeliveryTest01 {
 	 public static void main (String[] args) {
 		  Members members = new Members();
