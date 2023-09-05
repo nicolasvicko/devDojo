@@ -22,6 +22,11 @@ public class ProducerService {
 		  ProducerRepository.update(producer);
 	 }
 
+	 public static List<Producer> findByName (String name) {
+		  return ProducerRepository.findByName(name);
+	 }
+
+
 	 public static List<Producer> findAll () {
 		  return ProducerRepository.findAll();
 	 }

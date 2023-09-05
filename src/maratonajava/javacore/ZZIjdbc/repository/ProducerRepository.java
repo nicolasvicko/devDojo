@@ -11,6 +11,8 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import static maratonajava.javacore.ZZIjdbc.service.ProducerService.findByName;
+
 @Log4j2
 public class ProducerRepository {
 
@@ -22,7 +24,6 @@ public class ProducerRepository {
 				log.info("Insert producer '{}' in the Database rows affect '{}' ", producer.getName(), rowsAffected);
 		  } catch (SQLException e) {
 				log.error("Error while trying to insert producer '{}' ", producer.getName(), e);
-				e.printStackTrace();
 		  }
 	 }
 
@@ -34,7 +35,6 @@ public class ProducerRepository {
 				log.info("Deleted producer '{}' from the Database rows affect '{}' ", id, rowsAffected);
 		  } catch (SQLException e) {
 				log.error("Error while trying to delete producer '{}' ", id, e);
-				e.printStackTrace();
 		  }
 	 }
 
@@ -46,13 +46,18 @@ public class ProducerRepository {
 				log.info("Updated producer '{}'  rows affect '{}' ", producer.getId(), rowsAffected);
 		  } catch (SQLException e) {
 				log.error("Error while trying updated producer '{}' ", producer.getId(), e);
-				e.printStackTrace();
 		  }
 	 }
 
-	 public static List<Producer> findAll () {
-		  log.info("From All Producer ");
-		  String sql = "SELECT id, name FROM anime_store.producer;;";
+
+	 public static List<Producer> findAll() {
+		  log.info("From All Producers");
+		  return findByName(" ");
+	 }
+
+	 public static List<Producer> findByName (String name) {
+		  log.info("From  Producer by name");
+		  String sql = "SELECT * FROM anime_store.producer where name like '%%%s%%';".formatted(name);
 		  List<Producer> producers = new ArrayList<>();
 		  try (Connection conn = ConnectionFactory.getConnection();
 				 Statement stmt = conn.createStatement();
