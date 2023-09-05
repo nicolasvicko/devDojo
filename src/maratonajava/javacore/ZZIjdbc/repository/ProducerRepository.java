@@ -34,4 +34,16 @@ public class ProducerRepository {
 				e.printStackTrace();
 		  }
 	 }
+
+		  public static void update (Producer producer) {
+				String sql = "UPDATE `anime_store`.`producer` SET `name` = '%s' WHERE (`id` = '%d');".formatted(producer.getName(),producer.getId());
+				try (Connection conn = ConnectionFactory.getConnection();
+					  Statement stmt = conn.createStatement()) {
+					 int rowsAffected = stmt.executeUpdate(sql);
+					 log.info("Updated producer '{}'  rows affect '{}' ", producer.getId(), rowsAffected);
+				} catch (SQLException e) {
+					 log.error("Error while trying updated producer '{}' ", producer.getId(), e);
+					 e.printStackTrace();
+				}
+	 }
 }
