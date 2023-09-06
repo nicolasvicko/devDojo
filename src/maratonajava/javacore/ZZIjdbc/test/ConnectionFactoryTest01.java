@@ -4,10 +4,6 @@ import lombok.extern.log4j.Log4j2;
 import maratonajava.javacore.ZZIjdbc.domain.Producer;
 import maratonajava.javacore.ZZIjdbc.service.ProducerService;
 
-import java.util.List;
-import java.util.Optional;
-import java.util.stream.Stream;
-
 @Log4j2
 public class ConnectionFactoryTest01 {
 
@@ -24,9 +20,11 @@ public class ConnectionFactoryTest01 {
 		  List<Producer> producers = ProducerService.findAll();
 		  List<Producer> producers = ProducerService.findByName("Deen");
 		   log.info("Producers found '{}'", producers);
+		   		  ProducerService.showProducerMetaData();
 		  */
 
-		  ProducerService.showProducerMetadata();
+
+		  ProducerService.showDriverMetaData();
 
 
 

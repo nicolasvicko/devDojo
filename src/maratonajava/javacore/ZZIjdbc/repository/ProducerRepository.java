@@ -8,8 +8,6 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-import static maratonajava.javacore.ZZIjdbc.service.ProducerService.findByName;
-
 @Log4j2
 public class ProducerRepository {
 
@@ -47,7 +45,7 @@ public class ProducerRepository {
 	 }
 
 
-	 public static List<Producer> findAll() {
+	 public static List<Producer> findAll () {
 		  log.info("From All Producers");
 		  return findByName(" ");
 	 }
@@ -72,17 +70,16 @@ public class ProducerRepository {
 		  return producers;
 	 }
 
-	 public static void showProducerMetadata () {
+	 public static void showProducerMetaData () {
 		  log.info("Showing Producer Metadata");
 		  String sql = "SELECT * FROM anime_store.producer;";
 		  try (Connection conn = ConnectionFactory.getConnection();
 				 Statement stmt = conn.createStatement();
 				 ResultSet rs = stmt.executeQuery(sql)) {
 				ResultSetMetaData rsMetaData = rs.getMetaData();
-				rs.next();
 				int columnCount = rsMetaData.getColumnCount();
 				log.info("Collumns count '{}' ", columnCount);
-				for (int i = 1; i <=columnCount ; i++) {
+				for (int i = 1; i <= columnCount; i++) {
 					 log.info("Table name '{}'", rsMetaData.getTableName(i));
 					 log.info("Collumn name '{}'", rsMetaData.getColumnName(i));
 					 log.info("Collumn size '{}'", rsMetaData.getColumnDisplaySize(i));
@@ -93,4 +90,38 @@ public class ProducerRepository {
 				log.error("Error while tryingto find all producers", e);
 		  }
 	 }
+
+	 public static void showDriverMetaData () {
+		  log.info("Showing Driver Metadata");
+		  try (Connection conn = ConnectionFactory.getConnection()) {
+				DatabaseMetaData dbMetaData = conn.getMetaData();
+				if (dbMetaData.supportsResultSetType(ResultSet.TYPE_FORWARD_ONLY)) {
+					 log.info("Suports TYPE_FORWARD_ONLY");
+					 if (dbMetaData.supportsResultSetConcurrency(ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_UPDATABLE)) {
+						  log.info("And Supports CONCUR_UPTABLE");
+					 }
+				}
+
+				if (dbMetaData.supportsResultSetType(ResultSet.TYPE_SCROLL_INSENSITIVE)) {
+					 log.info("Suports TYPE_SCROLL_INSENSITIVE");
+					 if (dbMetaData.supportsResultSetConcurrency(ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_UPDATABLE)) {
+						  log.info("And Supports CONCUR_UPTABLE");
+					 }
+				}
+
+				if (dbMetaData.supportsResultSetType(ResultSet.TYPE_SCROLL_SENSITIVE)) {
+					 log.info("Suports TYPE_SCROLL_SENSITIVE");
+					 if (dbMetaData.supportsResultSetConcurrency(ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_UPDATABLE)) {
+						  log.info("And Supports CONCUR_UPTABLE");
+					 }
+				}
+
+
+		  } catch (SQLException e) {
+				log.error("Error while tryingto find all producers", e);
+
+
+		  }
+	 }
 }
+
