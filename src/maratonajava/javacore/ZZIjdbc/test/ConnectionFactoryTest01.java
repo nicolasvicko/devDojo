@@ -21,9 +21,11 @@ public class ConnectionFactoryTest01 {
 		  */
 
 
+
 		  ProducerService.showDriverMetaData();
 
 
+		 git config --global user.signingkey C:\Users\nicol\.ssh\id_github
 
 
 
