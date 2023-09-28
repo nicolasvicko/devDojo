@@ -7,9 +7,9 @@ import java.sql.SQLException;
 public class ConnectionFactory {
 	 //java.sql = Connection, Statement, ResultSet, DriverManager
 	 public static Connection getConnection() throws SQLException {
-		  String url = "jdbc:mysql://192.168.1.152:3306/anime_store";
-		  String username = "maratonajava";
-		  String password = "devdojo";
+		  String url = "jdbc:mysql://127.0.0.1:3306/anime_store";
+		  String username = "root";
+		  String password = "root";
 
 		 return DriverManager.getConnection(url, username, password);
 
